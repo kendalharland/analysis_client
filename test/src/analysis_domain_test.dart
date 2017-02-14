@@ -31,9 +31,11 @@ void main() {
           JSON.encode({
             'id': requestId,
             'method': 'analysis.setAnalysisRoots',
-            'included': includedFiles,
-            'excluded': excludedFiles,
-            'packageRoots': packageRoots,
+            'params': {
+              'included': includedFiles,
+              'excluded': excludedFiles,
+              'packageRoots': packageRoots,
+            }
           }));
     });
   });
