@@ -1,0 +1,12 @@
+name: analysis_client
+version: 0.0.1
+authors:
+  - Kendal Harland <kendaljharland@gmail.com>
+description: A client library for the dart analysis server.
+dependencies:
+  semver:
+  meta:
+dev_dependencies:
+  test:
+  dart_style:
+  presubmit:
