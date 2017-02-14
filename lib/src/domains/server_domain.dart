@@ -13,7 +13,7 @@ class ServerRequestDomain implements RequestDomain {
   Stream<Notification> get notifications => null;
 
   /// Sends a request to shutdown the server.
-  Future<Object> shutdown(String id) async {
+  AnalysisRequest shutdown(String id) {
     _sink.write(new ShutdownRequest(id));
   }
 }

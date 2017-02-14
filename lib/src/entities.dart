@@ -18,9 +18,9 @@ class ShutdownRequest extends Entity {
 
   @override
   Map<String, String> toJson() => <String, String>{
-    'id': id,
-    'method': 'server.shutdown',
-  };
+        'id': id,
+        'method': 'server.shutdown',
+      };
 }
 
 class SetAnalysisRootsRequest extends Entity {
@@ -29,38 +29,38 @@ class SetAnalysisRootsRequest extends Entity {
   final Map<String, String> packageRoots;
 
   const SetAnalysisRootsRequest(
-      String id, {
-      this.included: const [],
-      this.excluded: const [],
-      this.packageRoots: const {},
-      })
+    String id, {
+    this.included: const [],
+    this.excluded: const [],
+    this.packageRoots: const {},
+  })
       : super._(id);
 
   @override
   Map<String, Object> toJson() => {
-    'id': id,
-    'method': 'analysis.setAnalysisRoots',
-    'params': {
-      'included': included,
-      'excluded': excluded,
-      'packageRoots': packageRoots,
-    }
-  };
+        'id': id,
+        'method': 'analysis.setAnalysisRoots',
+        'params': {
+          'included': included,
+          'excluded': excluded,
+          'packageRoots': packageRoots,
+        }
+      };
 }
 
 class GetErrorsRequest extends Entity {
   final String filePath;
 
   GetErrorsRequest(
-      String id, {
-      @required this.filePath,
-      })
+    String id, {
+    @required this.filePath,
+  })
       : super._(id);
 
   @override
   Map<String, Object> toJson() => {
-    'id': id,
-    'method': 'analysis.getErrors',
-    'params': {'file': filePath},
-  };
+        'id': id,
+        'method': 'analysis.getErrors',
+        'params': {'file': filePath},
+      };
 }

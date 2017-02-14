@@ -13,22 +13,24 @@ class AnalysisRequestDomain implements RequestDomain {
   Stream<Notification> get notifications => null;
 
   /// Sets the root paths used to determine which files to analyze.
-  Future<Object> setAnalysisRoots(
+  AnalysisRequest setAnalysisRoots(
     String id, {
     List<String> included: const [],
     List<String> excluded: const [],
     Map<String, String> packageRoots: const {},
-  }) async {
+  }) {
     _sink.write(new SetAnalysisRootsRequest(
       id,
       included: included,
       excluded: excluded,
       packageRoots: packageRoots,
     ));
+    return null;
   }
 
   /// Return the errors associated with the file at the given [filePath].
-  Future<Object> getErrors(String id, String filePath) async {
+  AnalysisRequest getErrors(String id, String filePath) {
     _sink.write(new GetErrorsRequest(id, filePath: filePath));
+    return null;
   }
 }
