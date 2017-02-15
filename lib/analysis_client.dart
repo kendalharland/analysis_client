@@ -1,6 +1,5 @@
 import 'package:analysis_client/src/domains/analysis_domain.dart';
 import 'package:analysis_client/src/domains/server_domain.dart';
-import 'package:analysis_client/src/domains/server_domain.dart';
 
 /// A client for the dart analysis server.
 ///

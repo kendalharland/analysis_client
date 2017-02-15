@@ -14,6 +14,6 @@ class ServerRequestDomain implements RequestDomain {
 
   /// Sends a request to shutdown the server.
   AnalysisRequest shutdown(String id) {
-    _sink.write(new ShutdownRequest(id));
+    _sink.writeln(new ShutdownRequest(id));
   }
 }
