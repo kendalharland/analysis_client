@@ -19,9 +19,10 @@ void main() {
       expect(
           clientOutput.toString(),
           JSON.encode({
-            'id': requestId,
-            'method': 'server.shutdown',
-          }));
+                'id': requestId,
+                'method': 'server.shutdown',
+              }) +
+              '\n');
     });
   });
 }

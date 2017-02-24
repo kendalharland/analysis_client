@@ -29,14 +29,15 @@ void main() {
       expect(
           clientOutput.toString(),
           JSON.encode({
-            'id': requestId,
-            'method': 'analysis.setAnalysisRoots',
-            'params': {
-              'included': includedFiles,
-              'excluded': excludedFiles,
-              'packageRoots': packageRoots,
-            }
-          }));
+                'id': requestId,
+                'method': 'analysis.setAnalysisRoots',
+                'params': {
+                  'included': includedFiles,
+                  'excluded': excludedFiles,
+                  'packageRoots': packageRoots,
+                }
+              }) +
+              '\n');
     });
   });
 }

@@ -19,7 +19,7 @@ class AnalysisRequestDomain implements RequestDomain {
     List<String> excluded: const [],
     Map<String, String> packageRoots: const {},
   }) {
-    _sink.write(new SetAnalysisRootsRequest(
+    _sink.writeln(new SetAnalysisRootsRequest(
       id,
       included: included,
       excluded: excluded,
@@ -30,7 +30,7 @@ class AnalysisRequestDomain implements RequestDomain {
 
   /// Return the errors associated with the file at the given [filePath].
   AnalysisRequest getErrors(String id, String filePath) {
-    _sink.write(new GetErrorsRequest(id, filePath: filePath));
+    _sink.writeln(new GetErrorsRequest(id, filePath: filePath));
     return null;
   }
 }
